@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+<style>
+    body{
+        background-color: rgb(205, 230, 234);
+
+    }
+    th, td {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: center;
+        width: 16.66%;
+    }
+    table{
+        border-spacing: 20px;
+        width: 100%;
+        margin-top: 50px;
+    }
+    th{
+        padding: 10px;
+        background-color: rgb(145, 217, 154);
+    }
+    td{
+        height: 25vh;
+        background-color: rgb(228, 225, 162);
+        overflow: hidden;
+        img{
+            width: 95%;
+        }
+    }
+    h1{
+        text-align: center;
+    }
+    button{
+        width: 50%;
+        height: 100%;
+    
+    }
+</style>
+  <head>
+    <meta charset="UTF-8">
+    <title>PokePedia Search</title>
+  </head>
+  <body>
+    <h1>PokePedia</h1>
+    <table>
+        <tr>
+            <form>
+                <th>Typ
+                    <select id="typ" name="typ">
+                        <option value="1">Opcja1</option>
+                        <option value="2">Opcja2</option>
+                        <option value="3">Opcja3</option>
+                        <option value="4">Opcja4</option>
+                        <option value="5">Opcja5</option>
+                    </select>
+                </th>
+                <th>Gatunek
+                    <select id="gatunek" name="gatunek">
+                        <option value="1">Opcja1</option>
+                        <option value="2">Opcja2</option>
+                        <option value="3">Opcja3</option>
+                        <option value="4">Opcja4</option>
+                        <option value="5">Opcja5</option>
+                    </select>
+                </th>
+                <th>Płeć
+                    <select id="plec" name="plec">
+                        <option value="1">Opcja1</option>
+                        <option value="2">Opcja2</option>
+                        <option value="3">Opcja3</option>
+                        <option value="4">Opcja4</option>
+                        <option value="5">Opcja5</option>
+                    </select>
+                </th>
+                <th>Lokalizacja
+                    <select id="lokalizacja" name="lokalizacja">
+                        <option value="1">Opcja1</option>
+                        <option value="2">Opcja2</option>
+                        <option value="3">Opcja3</option>
+                        <option value="4">Opcja4</option>
+                        <option value="5">Opcja5</option>
+                    </select>
+                </th>
+                <th colspan="2"> <!--Można dodać onlick do th żeby całe pole było filtrowania-->
+                    <button>Filtruj</button> <!-- Trzeba dodać funkcjonalność przyciku -->
+                </th>
+            </form>
+            
+        </tr>
+        <tr>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10001.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10002.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10003.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10004.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10005.png">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10006.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10007.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10008.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10009.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10010.png">
+            </td>
+            <td>
+                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10011.png">
+            </td>
+        </tr>
+    </table> 
+     
+  </body>
+</html>

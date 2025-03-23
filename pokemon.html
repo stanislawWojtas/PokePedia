@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <style>
+        body{
+            background-color: rgb(205, 230, 234);
+        }
+        .wyszukiwanie{
+            text-align: center;
+            height: 10vh;
+            float: top;
+            input, button{
+                text-align: center;
+                padding: 20px;
+                font-size: 20px;
+                padding-right: 50px;
+                padding-left: 50px;          
+            }
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            margin-top: 10vh;
+            justify-content: space-between;
+        }
+        .zdjecie{
+            border: 1px solid black;
+            background-color: rgb(228, 225, 162);
+            border-radius: 20px;
+            text-align: center;
+            font-size: 20px;
+            width: 40vw;
+            height: 60vh;
+            margin-left: 5vw;
+            place-items: center;
+            overflow: hidden;
+            img{
+              width: 100%;
+            }
+        }
+        .informacje{
+            float: right;
+            margin-right: 5vw;
+            width: 40vw;
+            text-align: center;
+            li{
+                text-align: left;
+                font-size: 20px;
+                margin-left: 1vw;
+                margin-bottom: 1vh;
+            }
+            audio{
+                height: 3vh;
+                object-position: center;
+            }
+            button{
+                padding: 20px;
+                font-size: 20px;
+                text-align: center;
+                margin-top: 4vh;
+            }
+
+        }
+    </style>
+  <head>
+    <meta charset="UTF-8">
+    <title>PokePedia</title>
+  </head>
+  <body>
+    <h1>PokePedia</h1>
+    <div class="wyszukiwanie">
+        <form>
+            <input type="text" name="pname" id="pname" placeholder="Wyszukaj po nazwie">
+            <button type="submit">Szukaj</button>
+        </form>
+    </div>
+    <div class="container">
+        <div class="zdjecie">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/1.png">
+        </div>
+        <div class = informacje>
+            <h3>Informacje o wyszukanym pokemonie:</h3>
+            <ul>
+                <li>Umiejętności:
+                  <ul>
+                    <li>Mega słodki</li>
+                    <li>Może uwalić palec</li>
+                  </ul>
+                </li>
+                <li>Dźwięki:
+                  <ul>
+                    <li>
+                      <audio src="latest/1.ogg" controls></audio>
+                    </li>
+                  </ul>
+                </li>
+                <li>Itemy:
+                  <ul>
+                    <li>Sałata na plecach</li>
+                    <li>Kasztany w kieszeni</li>
+                  </ul>
+                </li>
+                <li>Gatunek - Zielony złodziejaszek</li>
+                <li>Typ - Wysocy blondyni</li>
+                <li>Statystyki:
+                  <ul>
+                    <li>20HP</li>
+                    <li>Mega szybki</li>
+                  </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </body>
+</html>
