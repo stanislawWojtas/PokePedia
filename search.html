@@ -1,53 +1,137 @@
 <!DOCTYPE html>
 <html lang="pl">
 <style>
-    body{
-        background-color: rgb(205, 230, 234);
-
+    html{
+            background: url('./resources/background4.png') no-repeat bottom fixed;
+            background-size: cover;
+            
     }
-    th, td {
+    .page{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 4fr 4fr 1fr;
+        gap: 4vh;
+    }
+    .title{
         border: 1px solid black;
-        border-radius: 20px;
-        padding: 20px;
-        text-align: center;
-        width: 16.66%;
-    }
-    table{
-        border-spacing: 20px;
-        width: 100%;
-        margin-top: 50px;
-    }
-    th{
-        padding: 10px;
-        background-color: rgb(145, 217, 154);
-    }
-    td{
-        height: 25vh;
-        background-color: rgb(228, 225, 162);
-        overflow: hidden;
-        img{
-            width: 95%;
+        border-radius: 40%;
+        padding: 5px;
+        background-image: linear-gradient(to right, rgb(83, 194, 201), yellow);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        grid-column: 3/ span 2;
+        justify-self: center;
+        a{
+            text-decoration: none;
+            color: black;
         }
     }
-    h1{
+    .form-table{
+        grid-row: 2;
+        grid-column: 1/ span 6;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 5vh;
+        align-items: center;
         text-align: center;
+        select {
+            background: linear-gradient(to bottom right, rgb(212, 180, 221), #7bd7d7);
+            font-size: 1.2em;
+            border-radius: 40%;
+            padding: 10px;
+        }
     }
-    button{
-        width: 50%;
+    .form-group{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-image: linear-gradient(to bottom right, rgb(24, 154, 180), #ace675);
+        border-radius: 20px;
+        width: 100%;
         height: 100%;
-    
+
     }
+    .form-submit{
+        grid-column:  5 / span 2;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        height: 90%;
+        width: 50%;
+        align-self: center;
+        justify-self: center;
+        button{
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom right, rgb(24, 154, 180), #ace675);
+            border-radius: 20px;
+            font-size: 1.2em;
+            border: none;
+            &:hover{
+                background-image: linear-gradient(to bottom, #d1e939, rgb(240, 30, 30));
+                transform: scale(1.1);
+            }
+        }
+    }
+    .row1{
+        grid-row: 3;
+    }
+    .row2{
+        grid-row: 4;
+    }
+    .row1, .row2{
+        grid-column: 1 / span 6;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 5vh;
+        div{
+            border: 1px solid black;
+            background-image: linear-gradient(to bottom right, rgb(24, 154, 180), #ace675);
+            border-radius: 20px;
+            background-color: rgb(228, 225, 162);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+    .buttons {
+    grid-column: 3 / span 2;
+    grid-row: 5;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    gap: 2vw;
+    }
+
+    .buttons button {
+        font-size: 2em;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: rgb(83, 194, 201);
+        color: white;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(24, 154, 180);
+            transform: scale(1.1);
+        }
+    }
+
 </style>
+
   <head>
     <meta charset="UTF-8">
     <title>PokePedia Search</title>
   </head>
   <body>
-    <h1>PokePedia</h1>
-    <table>
-        <tr>
-            <form>
-                <th>Typ
+    <div class="page">
+        <div class="title">
+            <h1><a href="./index.html">PokePedia</a></h1>
+        </div>
+            <form class="form-table">
+                <div class="form-group">Typ
                     <select id="typ" name="typ">
                         <option value="1">Opcja1</option>
                         <option value="2">Opcja2</option>
@@ -55,8 +139,8 @@
                         <option value="4">Opcja4</option>
                         <option value="5">Opcja5</option>
                     </select>
-                </th>
-                <th>Gatunek
+                </div>
+                <div class="form-group">Gatunek
                     <select id="gatunek" name="gatunek">
                         <option value="1">Opcja1</option>
                         <option value="2">Opcja2</option>
@@ -64,8 +148,8 @@
                         <option value="4">Opcja4</option>
                         <option value="5">Opcja5</option>
                     </select>
-                </th>
-                <th>Płeć
+                </div>
+                <div class="form-group">Płeć
                     <select id="plec" name="plec">
                         <option value="1">Opcja1</option>
                         <option value="2">Opcja2</option>
@@ -73,8 +157,8 @@
                         <option value="4">Opcja4</option>
                         <option value="5">Opcja5</option>
                     </select>
-                </th>
-                <th>Lokalizacja
+                </div>
+                <div class="form-group">Lokalizacja
                     <select id="lokalizacja" name="lokalizacja">
                         <option value="1">Opcja1</option>
                         <option value="2">Opcja2</option>
@@ -82,54 +166,33 @@
                         <option value="4">Opcja4</option>
                         <option value="5">Opcja5</option>
                     </select>
-                </th>
-                <th colspan="2"> <!--Można dodać onlick do th żeby całe pole było filtrowania-->
-                    <button>Filtruj</button> <!-- Trzeba dodać funkcjonalność przyciku -->
-                </th>
+                </div>
+                <div class="form-submit">
+                    <button>Filtruj</button>
+                </div>
             </form>
-            
-        </tr>
-        <tr>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10001.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10002.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10003.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10004.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10005.png">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10006.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10007.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10008.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10009.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10010.png">
-            </td>
-            <td>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10011.png">
-            </td>
-        </tr>
-    </table> 
-     
+            <div class="row1">
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10001.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10002.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10003.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10004.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10005.png"></div>
+            </div>
+            <div class="row2">
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10006.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10007.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10008.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10009.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10010.png"></div>
+                <div><img src="https://raw.githubusercontent.com/PokeAPI/sprites/23b8c92b846a37133ab2b0a8a307b90f2515d623/sprites/pokemon/10011.png"></div>
+            </div>
+            <div class="buttons">
+                <button id="first" title="First">&#8676;</button> <!-- Strzałki unicode gdzies z neta wzięte -->
+                <button id="previous" title="Previous">&#8592;</button>
+                <button id="next" title="Next">&#8594;</button>
+                <button id="last" title="Last">&#8677;</button>
+            </div>
+    </div>
   </body>
 </html>
